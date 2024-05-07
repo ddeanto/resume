@@ -3,11 +3,19 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
     return (
-        <nav>
-            <NavLink to="/about" style={({ isActive }) => isActive ? { fontWeight: 'bold' } : undefined}>About</NavLink>
-            <NavLink to="/portfolio" style={({ isActive }) => isActive ? { fontWeight: 'bold' } : undefined}>Portfolio</NavLink>
-            <NavLink to="/contact" style={({ isActive }) => isActive ? { fontWeight: 'bold' } : undefined}>Contact</NavLink>
-            <NavLink to="/resume" style={({ isActive }) => isActive ? { fontWeight: 'bold' } : undefined}>Resume</NavLink>
+        <nav className="flex space-x-8 justify-center mt-2">
+            <NavLink to="/about" className={({ isActive }) => isActive ? "px-4 text-xl font-bold text-gold" : "px-4 text-xl text-white hover:text-diamond"}>
+                About
+            </NavLink>
+            <NavLink to="/portfolio" className={({ isActive }) => isActive ? "px-4 text-xl font-bold text-gold" : "px-4 text-xl text-white hover:text-diamond"}>
+                Portfolio
+            </NavLink>
+            <NavLink to="/contact" className={({ isActive }) => isActive ? "px-4 text-xl font-bold text-gold" : "px-4 text-xl text-white hover:text-diamond"}>
+                Contact
+            </NavLink>
+            <NavLink to="/resume" className={({ isActive }) => isActive ? "px-4 text-xl font-bold text-gold" : "px-4 text-xl text-white hover:text-diamond"}>
+                Resume
+            </NavLink>
         </nav>
     );
 }

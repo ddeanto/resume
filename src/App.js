@@ -15,18 +15,20 @@ import Resume from "./components/Resume";
 const App = () => {
     return (
         <Router>
-            <div>
+            <div className="flex flex-col min-h-screen bg-black">
                 <Header />
-                <Routes>
-                    <Route path="/about" element={<About />} />
-                    <Route path="/portfolio" element={<Portfolio />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/resume" element={<Resume />} />
-                    <Route
-                        path="/"
-                        element={<Navigate to="/about" replace />}
-                    />
-                </Routes>
+                <main className="flex-grow">
+                    <Routes>
+                        <Route path="/about" element={<About />} />
+                        <Route path="/portfolio" element={<Portfolio />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/resume" element={<Resume />} />
+                        <Route
+                            path="/"
+                            element={<Navigate to="/about" replace />}
+                        />
+                    </Routes>
+                </main>
                 <Footer />
             </div>
         </Router>
